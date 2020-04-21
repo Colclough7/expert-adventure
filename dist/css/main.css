@@ -715,7 +715,7 @@ img {
 /* ABOUT PAGE MEDIA QUERIES */
 
 @media screen and (min-width: 700px) {
-  .card-wrapper {
+  .card-wrapper #home {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
