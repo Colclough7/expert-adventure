@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
 :root {
   --background-color: #f5f9fd;
   --primary-color: #333;
@@ -38,6 +40,7 @@ img {
   width: 100%;
 }
 
+
 .container {
   max-width: 1100px;
   margin: auto;
@@ -73,6 +76,11 @@ img {
 
 .navbar .nav a:hover {
   color: #555;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  color: rgba(255, 0, 0, 0.8)
 }
 
 /* SECTION A */
@@ -282,6 +290,8 @@ img {
 /* END INDEX PAGE RULES */
 
 /* ABOUT PAGE STARTS HERE */
+
+
 .about-section {
   padding: 10rem 0;
   background-color: #fff;
@@ -429,94 +439,232 @@ img {
 
 /* END ABOUT PAGE */
 /* START PRICE PAGE */
-.wrapper-price {
-  background: #eee;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  width: auto;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
+.filler {
+  background: url("../img/light.jpg");
+  height: 90vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+
+}
+
+.price-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #B5D3E7;
+
+}
+
+.price-card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image""text""stats";
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 18px;
+  background: whitesmoke;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
-
-
-}
-
-.single-price {
-  width: 33%;
-  background: #262626;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  transition: 0.9s;
-}
-
-.price {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 2px solid #da4357;
-  margin: 5% auto 0 auto;
-  text-align: center;
-}
-
-.deals {
-  margin-top: 10%;
+  margin: auto;
+  transition: 0.5s;
+  cursor: pointer;
 
 }
 
-.single-price h1 {
+.price-card:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.price-card-image {
+  grid-area: image;
+  background: url("../img/price1.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  margin: 2px;
+}
+
+.price-card-image-two {
+  grid-area: image;
+  background: url("../img/price2.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  margin: 2px;
+}
+
+.price-card-image-three {
+  grid-area: image;
+  background: url("../img/price3.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  margin: 2px;
+}
+
+.price-card-text .our-price {
+  color: rgb(255, 7, 110);
   font-size: 18px;
-  color: #fff;
-  line-height: 3;
+}
+
+.price-card-text .our-price-second {
+  color: rgb(107, 142, 35);
+}
+
+.price-card-text .our-price-third {
+  color: rgb(255, 99, 71)
+}
+
+.price-card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+..price-card-text p {
+  color: gray;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.price-card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.price-card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+  margin: 2px;
+}
+
+.price-card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.price-card-stats .type {
+  font-size: 11px;
+  font-weight: 300;
   text-transform: uppercase;
+
 }
 
-.price h2 {
-  font-size: 38px;
-  color: #fff;
-  margin-top: 30px;
+.price-card-stats .value {
+  font-size: 22px;
+  font-weight: 500;
 }
 
-.deals h4 {
-  font-size: 14px;
-  font-weight: normal;
-  text-align: center;
-  color: #fff;
-  line-height: 1;
+.price-card-stats .border {
+  border-left: 1px solid rgb(172, 26, 87);
+  border-right: 1px solid rgb(172, 26, 87);
+
 }
 
-.single-price:hover {
-  background: #da4357;
-  color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
-  transform: scale(1.1);
-  z-index: 1;
-  border-radius: 25px;
+.price-card-stats .value sup {
+  font-size: 12px;
 }
 
-.single-price:hover .price {
-  border-color: #fff;
+.price-card-stats-second {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(107, 142, 35);
+  margin: 2px;
 }
 
-.single-price a {
-  text-decoration: none;
-  background-color: #da4357;
-  color: #fff;
-  padding: 10px 40px;
-  display: inline-block;
-  margin: 10% auto;
+.price-card-stats-second .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.price-card-stats-second .type {
+  font-size: 11px;
+  font-weight: 300;
   text-transform: uppercase;
-  font-weight: bolder;
+
 }
 
-.single-price:hover a {
-  background-color: #262626;
-  color: #fff;
+.price-card-stats-second .value {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.price-card-stats-second .border {
+  border-left: 1px solid rgb(85, 107, 47);
+  border-right: 1px solid rgb(85, 107, 47);
+
+}
+
+.price-card-stats-second .value sup {
+  font-size: 12px;
+}
+
+.price-card-stats-third {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 99, 71);
+  margin: 2px;
+}
+
+.price-card-stats-third .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.price-card-stats-third .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+}
+
+.price-card-stats-third .value {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.price-card-stats-third .border {
+  border-left: 1px solid rgb(255, 69, 0);
+  border-right: 1px solid rgb(255, 69, 0);
+
+}
+
+.price-card-stats-third .value sup {
+  font-size: 12px;
 }
 
 /* END PRICE PAGE */
